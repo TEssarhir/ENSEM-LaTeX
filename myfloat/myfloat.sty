@@ -1,0 +1,22 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{myfloat}
+\RequirePackage{float}
+% \RequirePackage{caption}
+
+% \floatstyle{ruled}
+% \restylefloat{figure}
+% \restylefloat{table}
+
+% \captionsetup[figure]{
+%     format=plain,
+%     justification=centering,
+%     labelfont={sc},
+%     labelsep={endash},
+%     singlelinecheck=false
+% }
+
+\makeatletter
+\def\fps@figure{H}
+\def\fps@table{H}
+\makeatother

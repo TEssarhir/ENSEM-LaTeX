@@ -1,0 +1,73 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mycode}
+\RequirePackage{xcolor}
+\RequirePackage{listings}
+\RequirePackage{caption}
+
+% \renewcommand\lstlistingname{Code}
+% \DeclareCaptionFormat{lmrcaps}{{\fontfamily{lmr}\fontshape{sc}\selectfont#1}#2#3\par}
+% \captionsetup[lstlisting]{format=lmrcaps}
+
+\lstdefinestyle{txt}{
+    backgroundcolor=\color{gray!10},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    basicstyle=\footnotesize\ttfamily,
+    frame=single,
+    frameround=fttt,
+    framesep=5pt,
+    rulecolor=\color{black},
+    breaklines=true,
+    postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+    captionpos=b,
+    showstringspaces=false,
+}
+
+\lstdefinestyle{log}{
+    style=txt,
+    numbers=none,
+}
+
+\lstdefinestyle{py}{
+    style=txt,
+    language=Python,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!40!black},
+    stringstyle=\color{orange},
+}
+
+\lstdefinestyle{m}{
+    style=txt,
+    language=Matlab,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!50!black},
+    stringstyle=\color[HTML]{FF00FF},
+    morekeywords={function,end,if,else,elseif,while,for,switch,case,otherwise,try,catch},
+    morecomment=[l]{\%},
+    morecomment=[s]{/*}{*/},
+}
+
+\lstdefinestyle{c}{
+    style=txt,
+    language=C,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!40!black},
+    stringstyle=\color{orange},
+}
+
+\lstdefinestyle{java}{
+    style=txt,
+    language=Java,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!40!black},
+    stringstyle=\color{orange},
+}
+
+\lstdefinestyle{ino}{
+    style=txt,
+    language=C,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!40!black},
+    stringstyle=\color{orange},
+    morekeywords={setup,loop,INPUT,OUTPUT,INPUT_PULLUP,LOW,HIGH,LED_BUILTIN,delay,millis,analogRead,analogWrite,digitalRead,digitalWrite,pinMode,attachInterrupt,detachInterrupt,interrupts,noInterrupts},
+}

@@ -1,0 +1,11 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mycsv}
+
+\RequirePackage{csvsimple}
+\RequirePackage{colortbl}
+
+\csvstyle{default-RY}{
+    late after head = \\\hline\rowcolor{yellow!50},
+    late after line = \csvifoddrow{\\\rowcolor{yellow!50}}{\\\rowcolor{red!25}},
+    late after last line = \null \\ \hline
+}

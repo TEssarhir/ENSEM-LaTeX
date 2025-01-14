@@ -1,0 +1,72 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mypage}
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage{fontspec}
+\RequirePackage{vmargin}
+\setmarginsrb{2cm}{0cm}{2cm}{1.5cm}{2cm}{1cm}{2cm}{1cm} % espacement des en-têtes/bas de pages
+\RequirePackage{titlesec}
+\RequirePackage{xcolor}
+\RequirePackage{lastpage}
+\RequirePackage{fancyhdr}
+\RequirePackage{svg}
+\RequirePackage{authoraftertitle}
+\RequirePackage{hyperref}
+\RequirePackage[bottom]{footmisc}
+
+% \usepackage[pdftex,
+%             pdfauthor={Your Name},
+%             pdftitle={The Title},
+%             pdfsubject={The Subject},
+%             pdfkeywords={Some Keywords},
+%             pdfproducer={Latex with hyperref, or other system},
+%             pdfcreator={pdflatex, or other tool}]{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan
+    }
+
+\newif\ifstage
+\DeclareOption{stage}{\stagetrue}
+\ProcessOptions\relax
+
+\ifstage
+  \fancyhead[R]{\includesvg{./Annexe/Logos/_entreprise.svg}}
+  \fancyhead[L]{\includesvg{/Users/es_tk_/Documents/ENSEM/Logos/UL & ENSEM.svg}}
+\else
+  \fancyhead[L]{\includesvg{/Users/es_tk_/Documents/ENSEM/Logos/UL.svg}}
+  \fancyhead[R]{\includesvg{/Users/es_tk_/Documents/ENSEM/Logos/ENSEM.svg}}
+\fi
+
+\fancyfoot[L]{\fontspec{Cinzel Decorative}\MyAuthor}
+\fancyfoot[R]{\textit{\MyTitle}}
+\fancyfoot[C]{\textit{\thepage/\pageref*{LastPage}}}
+
+\titleformat{\section}
+{\normalfont\Large\bfseries\color[HTML]{FF0000}}
+{\thesection}{0.5em}{}
+
+\titleformat{\subsection}
+{\normalfont\large\bfseries\color[HTML]{008000}}
+{\thesubsection~}{0.25em}{}
+
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries\color[HTML]{000080}}
+{\thesubsubsection}{0.15em}{}
+\titleformat{\paragraph}[runin]
+{\normalfont\bfseries\color{gray}}
+{}{0pt}{}[~:]
+
+\pagestyle{fancy}
+\renewcommand\footrulewidth{0.4pt}
+\renewcommand\headrulewidth{0.4pt}
+
+\titlespacing{\section}{0pc}{1cm}{1cm}
+\titlespacing{\subsection}{0pc}{0.5cm}{0.5cm}
+\titlespacing{\subsubsection}{0pc}{0.35cm}{0.35cm}
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\alph{subsubsection}.}

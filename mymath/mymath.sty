@@ -1,0 +1,55 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{mymath}
+
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsopn}
+\RequirePackage{amsthm}
+\RequirePackage{esint}
+\RequirePackage[c]{esvect}
+\RequirePackage{framed}
+\RequirePackage{thmtools}
+\RequirePackage{etoolbox}
+\RequirePackage{fancybox}
+\RequirePackage{mathtools}
+\RequirePackage{stmaryrd}
+% \RequirePackage{gensymb}
+\everymath{\displaystyle}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\dr}{\partial}
+\newcommand{\cst}{\mathrm{cst}}
+
+\newcommand{\rot}[1]{\mathrm{rot}\left(#1\right)}
+\newcommand{\diver}[1]{\mathrm{div}\left(#1\right)}
+\newcommand{\grad}[1]{\mathrm{grad}\left(#1\right)}
+\newcommand{\Mom}{\mathcal{M}}
+\newcommand{\Four}[1]{\mathcal{F}\left[#1\right]}
+
+\newcommand{\oline}[1]{\overline{#1}}
+\newcommand{\ooline}[1]{\overline{\overline{#1}}}
+\newcommand{\uline}[1]{\underline{#1}}
+\newcommand{\uuline}[1]{\underline{\underline{#1}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{myleftbar}{%
+        \def\FrameCommand{\hspace{0.6em}\vrule width 2pt\hspace{0.6em}}%
+        \MakeFramed{\advance\hsize-\width \FrameRestore}
+    }%
+    {\endMakeFramed}
+
+\declaretheoremstyle[
+        spaceabove=6pt,
+        spacebelow=6pt
+        headfont=\normalfont\bfseries,
+        headpunct={} ,
+        headformat={\cornersize*{2pt}\ovalbox{\NAME~\NUMBER\ifstrequal{\NOTE}{}{\relax}{\NOTE}:}},
+        bodyfont=\normalfont,
+    ]{exobreak}
+
+\declaretheorem[style=exobreak, name=Exercice,%
+        postheadhook = \leavevmode\myleftbar, %
+        prefoothook = \endmyleftbar
+    ]{exo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
