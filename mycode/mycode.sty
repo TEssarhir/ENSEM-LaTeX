@@ -8,6 +8,10 @@
 % \DeclareCaptionFormat{lmrcaps}{{\fontfamily{lmr}\fontshape{sc}\selectfont#1}#2#3\par}
 % \captionsetup[lstlisting]{format=lmrcaps}
 
+\renewcommand\lstlistingname{Code}
+\DeclareCaptionFormat{lmrcaps}{{\fontfamily{lmr}\fontshape{sc}\selectfont#1}#2#3\par}
+\captionsetup[lstlisting]{format=lmrcaps}
+
 \lstdefinestyle{txt}{
     backgroundcolor=\color{gray!10},
     numbers=left,
