@@ -1,6 +1,8 @@
 
 # ENSEM-LaTeX
 
+![LICENCE](https://img.shields.io/badge/License-MIT-g.svg)
+
 ## Overview
 
 This repository contains custom LaTeX templates, styles, and configurations designed for creating professional documents specifically for academia *(in this case ENSEM School)*, reports, and presentations. It is equipped with modular packages and customizations to enhance productivity and maintain a consistent design.
