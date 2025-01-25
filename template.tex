@@ -1,0 +1,109 @@
+\documentclass[ensem,french]{myreport}
+
+% Importing necessary packages
+\usepackage{mysci}
+\usepackage{myfloat}
+\usepackage{mymath}
+\usepackage{mycode}
+\usepackage{mycsv}
+\usepackage{lipsum} % For lorem ipsum text
+
+% Document metadata
+\title{Title}
+\author{Author}
+\date{\today}
+
+\begin{document}
+
+% Table of contents
+\tableofcontents
+\newpage
+
+% Chapters
+\chapter{Introduction}
+\lipsum[1-2]
+
+\section{Background}
+\lipsum[3-4]
+
+\subsection{Historical Context}
+\lipsum[5-6]
+
+\subsubsection{Early Developments}
+\lipsum[7-8]
+
+\subsubsection{Modern Era}
+\lipsum[9-10]
+
+\section{Current Trends}
+\lipsum[11-12]
+
+\subsection{Technological Advances}
+\lipsum[13-14]
+
+\subsubsection{Innovations}
+\lipsum[15-16]
+
+\subsubsection{Challenges}
+\lipsum[17-18]
+
+\chapter{Scientific Content}
+\lipsum[19-20]
+\begin{equation}
+    E = mc^2
+\end{equation}
+\begin{equation}
+    \SI{1}{A} = \SI{1e-3}{kA}           %? Example of SI units
+\end{equation}
+
+\chapter{Code Examples}
+Here is an example of MATLAB code:
+\lstinputlisting[style=m]{template/example.m}
+
+\chapter{CSV Data}
+Here is an example of importing CSV data:
+\begin{table}
+    \centering
+    \csvreader[
+        tabular={|c|c|},
+        default-RY,
+    ]{template/example.csv}{}{\csvcoli & \csvcolii}
+    \caption{Example CSV Data}
+\end{table}
+
+\chapter{Figures and Tables}
+Here is a figure:
+\begin{figure}[H]
+    \centering
+    \includegraphics{template/example.eps}
+    \caption{Example Image}
+    \label{fig:example}
+\end{figure}
+
+\chapter{Lists Examples}
+
+% Enumerate and subenumerate
+\section{Enumerate Example}
+\begin{enumerate}
+    \item First item
+    \item Second item
+    \begin{enumerate}
+        \item Subitem one
+        \item Subitem two
+    \end{enumerate}
+    \item Third item
+\end{enumerate}
+
+% Itemize and subitemize
+\section{Itemize Example}
+\begin{itemize}
+    \item First item
+    \item Second item
+    \begin{itemize}
+        \item Subitem one
+        \item Subitem two
+    \end{itemize}
+    \item Third item
+\end{itemize}
+
+\end{document}

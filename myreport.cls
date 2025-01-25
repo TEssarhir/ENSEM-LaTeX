@@ -6,7 +6,6 @@
 
 \DeclareOption{ensem}{\renewcommand{\mystyle}{ensem}}
 \DeclareOption{stage}{\renewcommand{\mystyle}{stage}}
-\DeclareOption{symbio}{\renewcommand{\mystyle}{symbio}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 
 % Process options
