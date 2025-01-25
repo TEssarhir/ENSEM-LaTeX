@@ -18,7 +18,7 @@
 \RequirePackage{babel}
 \RequirePackage{lastpage}
 \RequirePackage{fancyhdr}
-\RequirePackage{svg}
+\RequirePackage{graphicx}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{vmargin}
 % \RequirePackage{xcolor}
@@ -68,8 +68,8 @@
   \fancyhf{}
   \renewcommand\footrulewidth{0.4pt}
   \renewcommand\headrulewidth{0.4pt}
-  \fancyhead[L]{\includesvg{Logos/UL.svg}}
-  \fancyhead[R]{\includesvg{Logos/ENSEM.svg}}
+  \fancyhead[L]{\includegraphics{Logos/UL.eps}}
+  \fancyhead[R]{\includegraphics{Logos/ENSEM.eps}}
   \fancyfoot[L]{\textit{\MyAuthor}}
   \fancyfoot[R]{\textit{\MyTitle}}
   \fancyfoot[C]{\textit{\thepage/\pageref*{LastPage}}}
@@ -81,8 +81,8 @@
   \fancyhf{}
   \renewcommand\footrulewidth{0.4pt}
   \renewcommand\headrulewidth{0.4pt}
-  \fancyhead[L]{\includesvg{Logos/UL & ENSEM.svg}}
-  \fancyhead[R]{\includesvg{./Annexe/Logos/_entreprise.svg}} %! Change the path to the logo of the company
+  \fancyhead[L]{\includegraphics{Logos/UL & ENSEM.eps}}
+  \fancyhead[R]{\includegraphics{./Annexe/Logos/_entreprise.png}} %! Change the path to the logo of the company
   \fancyfoot[L]{\textit{\MyAuthor}}
   \fancyfoot[R]{\textit{\MyTitle}}
   \fancyfoot[C]{\textit{\thepage/\pageref*{LastPage}}}
