@@ -20,9 +20,7 @@
 \RequirePackage{lastpage}
 \RequirePackage{fancyhdr}
 \RequirePackage{svg}
-\newcommand{\includeicon}[1]{\raisebox{-2.5pt}{\includesvg[height=10pt]{#1}}}
 \RequirePackage[T1]{fontenc}
-\RequirePackage{fontspec}
 \RequirePackage{vmargin}
 % \RequirePackage{xcolor}
 \RequirePackage{authoraftertitle}
@@ -50,13 +48,13 @@
 % Page layout settings
 \setmarginsrb{2cm}{0cm}{2cm}{1.5cm}{2cm}{1cm}{2cm}{1cm} % Margins
 
-% For title importing
-\renewcommand
-  {\maketitle}
-  {
-    \includepdf[offset=2.54cm -2.54cm]{Annexe/Couverture/Couverture.pdf}
-    \setcounter{page}{1}
-  }
+% For title importing %! Uncomment if you have a title page in a specific directory
+% \renewcommand
+%   {\maketitle}
+%   {
+%     \includepdf[offset=2.54cm -2.54cm]{Annexe/Couverture/Couverture.pdf}
+%     \setcounter{page}{1}
+%   }
 
 % Hyperref setup
 \hypersetup{
@@ -71,32 +69,22 @@
   \fancyhf{}
   \renewcommand\footrulewidth{0.4pt}
   \renewcommand\headrulewidth{0.4pt}
-  \fancyhead[L]{\includesvg{/Users/es_tk_/Documents/ENSEM/Logos/UL.svg}}
-  \fancyhead[R]{\includesvg{/Users/es_tk_/Documents/ENSEM/Logos/ENSEM.svg}}
-  \fancyfoot[L]{\fontspec{Cinzel Decorative}\MyAuthor}
+  \fancyhead[L]{\includesvg{Logos/UL.svg}}
+  \fancyhead[R]{\includesvg{Logos/ENSEM.svg}}
+  \fancyfoot[L]{\textit{\MyAuthor}}
   \fancyfoot[R]{\textit{\MyTitle}}
   \fancyfoot[C]{\textit{\thepage/\pageref*{LastPage}}}
 }
 
-% Define the 'symbio' style
-\fancypagestyle{symbio}{
-  \fancyhf{}
-  \renewcommand\footrulewidth{0.4pt}
-  \renewcommand\headrulewidth{0.4pt}
-  \fancyhead[R]{\includesvg{/Users/es_tk_/Documents/Symbio/Logos/Symbio.svg}}
-  \fancyfoot[L]{\fontspec{Cinzel Decorative}\MyAuthor}
-  \fancyfoot[R]{\textit{\MyTitle}}
-  \fancyfoot[C]{\textit{\thepage/\pageref*{LastPage}}}
-}
 
 % Define the 'stage' style
 \fancypagestyle{stage}{
   \fancyhf{}
   \renewcommand\footrulewidth{0.4pt}
   \renewcommand\headrulewidth{0.4pt}
-  \fancyhead[L]{\includesvg{/Users/es_tk_/Documents/ENSEM/Logos/UL & ENSEM.svg}}
-  \fancyhead[R]{\includesvg{./Annexe/Logos/_entreprise.svg}}
-  \fancyfoot[L]{\fontspec{Cinzel Decorative}\MyAuthor}
+  \fancyhead[L]{\includesvg{Logos/UL & ENSEM.svg}}
+  \fancyhead[R]{\includesvg{./Annexe/Logos/_entreprise.svg}} %! Change the path to the logo of the company
+  \fancyfoot[L]{\textit{\MyAuthor}}
   \fancyfoot[R]{\textit{\MyTitle}}
   \fancyfoot[C]{\textit{\thepage/\pageref*{LastPage}}}
 }
