@@ -55,6 +55,7 @@
   {\maketitle}
   {
     \includepdf[offset=2.54cm -2.54cm]{Annexe/Couverture/Couverture.pdf}
+    \null\thispagestyle{empty}\newpage
     \setcounter{page}{1}
   }
 
