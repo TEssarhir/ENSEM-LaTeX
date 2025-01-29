@@ -23,6 +23,7 @@
 \newcommand{\includeicon}[1]{\raisebox{-2.5pt}{\includesvg[height=10pt]{#1}}}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{fontspec}
+\setmainfont{iwona}
 \RequirePackage{vmargin}
 % \RequirePackage{xcolor}
 \RequirePackage{authoraftertitle}
