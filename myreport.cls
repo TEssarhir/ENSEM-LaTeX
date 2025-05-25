@@ -32,6 +32,8 @@
 \RequirePackage[bottom]{footmisc}
 \RequirePackage{enumitem}
 \RequirePackage{pifont}
+\RequirePackage{colortbl}
+\RequirePackage{tcolorbox}
 
 \setlist[itemize,1]{label={\ding{70}}}
 \setlist[itemize,2]{label={\ding{224}}}
@@ -129,7 +131,7 @@
 
 \titleformat{\paragraph}[runin]
   {\normalfont\bfseries}
-  {}{0pt}{}[:]
+  {}{0em}{\ding{43}}[:]
 
 \titlespacing{\section}{0pc}{1cm}{1cm}
 \titlespacing{\subsection}{\parindent}{0.5cm}{0.5cm}
