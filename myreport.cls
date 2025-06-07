@@ -34,6 +34,7 @@
 \RequirePackage{pifont}
 \RequirePackage{colortbl}
 \RequirePackage{tcolorbox}
+\RequirePackage{multirow}
 
 \setlist[itemize,1]{label={\ding{70}}}
 \setlist[itemize,2]{label={\ding{224}}}
