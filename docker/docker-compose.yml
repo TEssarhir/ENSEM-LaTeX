@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  latex:
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      # Mount the current directory to /workspace in the container
+      - ..:/workspace
+      # Mount the fonts directory
+      - ./fonts:/usr/local/share/fonts/opentype/cinzel
+      # Mount custom LaTeX packages
+      - ../mycode:/usr/local/texlive/texmf-local/tex/latex/mycode
+      - ../mychap:/usr/local/texlive/texmf-local/tex/latex/mychap
+      - ../mycsv:/usr/local/texlive/texmf-local/tex/latex/mycsv
+      - ../myfloat:/usr/local/texlive/texmf-local/tex/latex/myfloat
+      - ../mymath:/usr/local/texlive/texmf-local/tex/latex/mymath
+      - ../mypage:/usr/local/texlive/texmf-local/tex/latex/mypage
+      - ../mysci:/usr/local/texlive/texmf-local/tex/latex/mysci
+      - ../mytitle:/usr/local/texlive/texmf-local/tex/latex/mytitle
+      - ../matlab:/usr/local/texlive/texmf-local/tex/latex/matlab
+      - ../myreport.cls:/usr/local/texlive/texmf-local/tex/latex/myreport.cls
+    command: >
+      bash -c "fc-cache -f -v && mktexlsr && tail -f /dev/null"
+    container_name: latex-compiler

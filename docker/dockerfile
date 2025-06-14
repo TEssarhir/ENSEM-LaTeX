@@ -1,0 +1,27 @@
+FROM texlive/texlive:latest
+
+# Install additional packages and dependencies
+RUN apt-get update && apt-get install -y \
+    inkscape \
+    fontconfig \
+    && rm -rf /var/lib/apt/lists/*
+
+# Enable shell escape for pdflatex - with corrected path handling
+RUN find /usr/local/texlive -name texmf.cnf | xargs -I{} sh -c 'sed -i "s/^\(security\)/% \1/" {} && echo "shell_escape = t" >> {}'
+
+# Create directory for custom fonts
+RUN mkdir -p /usr/local/share/fonts/opentype/cinzel
+
+# Create texmf directory for custom LaTeX packages
+RUN mkdir -p /usr/local/texlive/texmf-local/tex/latex
+
+# Set environment variable for TEXMFHOME
+ENV TEXMFHOME=/usr/local/texlive/texmf-local
+
+# Update font cache
+RUN fc-cache -f -v
+
+# Update LaTeX package database
+RUN mktexlsr
+
+WORKDIR /workspace
