@@ -111,12 +111,31 @@
   \pagestyle{\mystyle} % Apply the custom style selected by the option
 }
 
-% Title format configurations
 \titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries}{\chaptertitlename~\thechapter}{20pt}{\thispagestyle{\mystyle}\Huge}%[\minitoc\newpage]
+  {
+    \normalfont\Huge\bfseries\scshape
+  }
+  {
+    \chaptertitlename\ \thechapter
+  }
+  {1ex}
+  {
+    {\color[HTML]{B0B0B0}\titlerule[1.5pt]}
+    \vspace{1ex}%
+  }
+  [
+    \vspace{1ex}
+    {\color[HTML]{B0B0B0}\titlerule[0.5pt]}%
+  ]
+
+\titlespacing*{\chapter}{0pt}{30pt}{50pt}
 
 \titleformat{name=\chapter,numberless}[display]
-  {\normalfont\huge\bfseries}{}{20pt}{\thispagestyle{\mystyle}\Huge}
+  {\normalfont\Huge\bfseries\scshape}
+  {}
+  {1ex}
+  {\thispagestyle{\mystyle}}
+  [\vspace{1ex}{\color[HTML]{B0B0B0}\titlerule[0.5pt]}]
 
 \titleformat{\section}
   {\normalfont\Large\bfseries\color[HTML]{FF0000}}
