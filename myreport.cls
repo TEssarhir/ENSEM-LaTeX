@@ -106,6 +106,17 @@
   \fancyfoot[C]{\textit{\thepage/\pageref*{LastPage}}}
 }
 
+% Define the chapters style
+\fancypagestyle{chapter/numbered}{
+  \fancyhf{}
+  \renewcommand\footrulewidth{0pt}
+  \renewcommand\headrulewidth{0pt}
+  \fancyhead{}
+  \fancyfoot[L]{}
+  \fancyfoot[R]{}
+  \fancyfoot[C]{\textit{\thepage/\pageref*{LastPage}}}
+}
+
 %! Apply the appropriate style based on the option
 \AtEndOfClass{%
   \pagestyle{\mystyle} % Apply the custom style selected by the option
@@ -120,7 +131,7 @@
   }
   {1ex}
   {
-    {\color[HTML]{B0B0B0}\titlerule[1.5pt]} \thispagestyle{\mystyle}
+    {\color[HTML]{B0B0B0}\titlerule[1.5pt]} \thispagestyle{chapter/numbered}
     \vspace{1ex}
   }
   [
