@@ -113,7 +113,7 @@
 
 % Title format configurations
 \titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries}{\chaptertitlename \thechapter}{20pt}{\thispagestyle{\mystyle}\Huge}%[\minitoc\newpage]
+  {\normalfont\huge\bfseries}{\chaptertitlename~\thechapter}{20pt}{\thispagestyle{\mystyle}\Huge}%[\minitoc\newpage]
 
 \titleformat{name=\chapter,numberless}[display]
   {\normalfont\huge\bfseries}{}{20pt}{\thispagestyle{\mystyle}\Huge}
