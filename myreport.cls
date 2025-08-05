@@ -109,7 +109,7 @@
 % Define the chapters style
 \fancypagestyle{chapter/numbered}{
   \fancyhf{}
-  \renewcommand\footrulewidth{0pt}
+  \renewcommand\footrulewidth{0.4pt}
   \renewcommand\headrulewidth{0pt}
   \fancyhead{}
   \fancyfoot[L]{}
