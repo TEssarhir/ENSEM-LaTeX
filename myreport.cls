@@ -120,8 +120,8 @@
   }
   {1ex}
   {
-    {\color[HTML]{B0B0B0}\titlerule[1.5pt]}
-    \vspace{1ex}%
+    {\color[HTML]{B0B0B0}\titlerule[1.5pt]} \thispagestyle{\mystyle}
+    \vspace{1ex}
   }
   [
     \vspace{1ex}
