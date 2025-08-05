@@ -134,7 +134,7 @@
   {\normalfont\Huge\bfseries\scshape}
   {}
   {1ex}
-  {\thispagestyle{\mystyle}}
+  {\thispagestyle{empty}}
   [\vspace{1ex}{\color[HTML]{B0B0B0}\titlerule[0.5pt]}]
 
 \titleformat{\section}
