@@ -79,7 +79,7 @@
   \fancyhead[L]{\includesvg{/Users/es_tk_/Documents/ENSEM/Logos/UL.svg}}
   \fancyhead[R]{\includesvg{/Users/es_tk_/Documents/ENSEM/Logos/ENSEM.svg}}
   \fancyfoot[L]{\fontspec{Cinzel Decorative}\MyAuthor}
-  \fancyfoot[R]{\textit{\MyTitle}}
+  \fancyfoot[R]{\leftmark}
   \fancyfoot[C]{\textit{\thepage/\pageref*{LastPage}}}
 }
 
@@ -90,7 +90,7 @@
   \renewcommand\headrulewidth{0.4pt}
   \fancyhead[R]{\includesvg{/Users/es_tk_/Documents/Symbio/Logos/Symbio.svg}}
   \fancyfoot[L]{\fontspec{Cinzel Decorative}\MyAuthor}
-  \fancyfoot[R]{\textit{\MyTitle}}
+  \fancyfoot[R]{\leftmark}
   \fancyfoot[C]{\textit{\thepage/\pageref*{LastPage}}}
 }
 
@@ -102,7 +102,7 @@
   \fancyhead[L]{\includesvg{/Users/es_tk_/Documents/ENSEM/Logos/UL & ENSEM.svg}}
   \fancyhead[R]{\includesvg{./Annexe/Logos/_entreprise.svg}}
   \fancyfoot[L]{\fontspec{Cinzel Decorative}\MyAuthor}
-  \fancyfoot[R]{\textit{\MyTitle}}
+  \fancyfoot[R]{\leftmark}
   \fancyfoot[C]{\textit{\thepage/\pageref*{LastPage}}}
 }
 
