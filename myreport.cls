@@ -154,11 +154,11 @@
 
 \titleformat{\subsection}
   {\normalfont\large\bfseries\color[HTML]{008000}}
-  {\thesubsection~}{0.25em}{}
+  {\thesubsection.}{0.25em}{}
 
 \titleformat{\subsubsection}
   {\normalfont\normalsize\bfseries\color[HTML]{000080}}
-  {\thesubsubsection}{0.15em}{}
+  {\thesubsubsection:}{0.15em}{}
 
 \titleformat{\paragraph}[runin]
   {\normalfont\bfseries}
@@ -167,7 +167,7 @@
 \titlespacing{\section}{0pc}{1cm}{1cm}
 \titlespacing{\subsection}{\parindent}{0.5cm}{0.5cm}
 \titlespacing{\subsubsection}{\parindent}{0.35cm}{0.35cm}
-\renewcommand{\thesection}{\Roman{section}}
-\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
-\renewcommand{\thesubsubsection}{\alph{subsubsection}.}
-
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\thechapter-\arabic{section}}
+\renewcommand{\thesubsection}{\alph{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection-\arabic{subsubsection}}
