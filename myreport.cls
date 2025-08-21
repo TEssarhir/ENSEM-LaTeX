@@ -20,6 +20,7 @@
 \RequirePackage{lastpage}
 \RequirePackage{fancyhdr}
 \RequirePackage{svg}
+\svgsetup{inkscapepath=.build/svg-inkscape/}
 \newcommand{\includeicon}[1]{\raisebox{-2.5pt}{\includesvg[height=10pt]{#1}}}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{fontspec}
